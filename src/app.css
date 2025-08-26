@@ -1,0 +1,43 @@
+body {
+  @apply bg-white text-gray-800 font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold;
+}
+
+a {
+  @apply text-blue-500 hover:text-blue-700;
+}
+
+button {
+  @apply bg-blue-500 text-white font-semibold py-2 px-4 rounded;
+}
+
+footer {
+  @apply bg-gray-800 text-white py-4 text-center;
+}
+
+.loading-spinner {
+  @apply border-4 border-t-4 border-gray-200 rounded-full animate-spin;
+}
+
+.navbar {
+  @apply flex justify-between items-center bg-gray-100 p-4;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+.hero {
+  @apply bg-blue-100 p-8 rounded-lg shadow-lg;
+}
+
+.form-input {
+  @apply border border-gray-300 rounded-md p-2 w-full;
+}
+
+.error-message {
+  @apply text-red-500;
+}
