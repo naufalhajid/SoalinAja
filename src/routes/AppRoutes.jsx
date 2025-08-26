@@ -40,9 +40,9 @@ function AppRoutes() {
               </ProtectedRoute>
             }
           />
-          {/* Optional: Fitur & Tentang */}
           <Route path="/features" element={<div>Fitur SoalinAja</div>} />
           <Route path="/about" element={<div>Tentang SoalinAja</div>} />
+          <Route path="*" element={<div className="text-center text-red-500 text-xl mt-20">Page not found</div>} />
         </Routes>
       </main>
       <Footer />
