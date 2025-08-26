@@ -1,9 +1,9 @@
-import { db } from './firebase_config';
+import { firestore } from './firebase_config';
 import { collection, addDoc, getDocs } from 'firebase/firestore';
 
 export const saveUserProfile = async (userProfile) => {
     try {
-        const docRef = await addDoc(collection(db, 'userProfiles'), userProfile);
+        const docRef = await addDoc(collection(firestore, 'userProfiles'), userProfile);
         return docRef.id;
     } catch (error) {
         console.error('Error adding document: ', error);
@@ -13,7 +13,7 @@ export const saveUserProfile = async (userProfile) => {
 
 export const getUserProfiles = async () => {
     try {
-        const querySnapshot = await getDocs(collection(db, 'userProfiles'));
+        const querySnapshot = await getDocs(collection(firestore, 'userProfiles'));
         const profiles = [];
         querySnapshot.forEach((doc) => {
             profiles.push({ id: doc.id, ...doc.data() });
